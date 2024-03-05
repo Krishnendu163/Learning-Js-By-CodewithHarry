@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Primitives and Objects</h1>
+        </section>
+
+        <script>
+            // nn bb ss u - Primitives in Js
+            let a = null;
+            let b = 345;
+            let c = true; // can also be false
+            let d = BigInt("567") + BigInt("3");
+            let e = "Harry";
+            let f = Symbol("I am a nice symbol");
+            let g;
+            console.log(a, b, c, d, e, f, g);
+            console.log(typeof c);
+
+            // Non Primitive Data Type - Objects in Js
+            const item = {
+                Harry: true,
+                Shubh: false,
+                Lovish: 67,
+                Rohan: undefined,
+            };
+            console.log(item["Lovish"]);
+        </script>
+    </body>
+</html>
