@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Strings Methods</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Strings Methods</h1>
+        </section>
+
+        <script>
+            let k = "Harry";
+            let k2 = "      Harry        ";
+
+            console.log(k.toUpperCase());
+            console.log(k.toLowerCase());
+            console.log(k.replace("Har", "Mar"));
+            console.log(k2.trim());
+            console.log(k.slice(1, 4));
+            console.log(k.slice(1));
+
+            let n;
+            for (n = 0; n <= k.length; n++) {
+                console.log(k[n]);
+            }
+
+            // String Practice set
+            // 1
+            const sentence = "The quick brown fox jumps over the lazy dog.";
+            const find = "broswn";
+            console.log(
+                `${String(sentence.includes(find))} ${find.toUpperCase()}`
+            );
+            console.log(
+                `The Word "${find}" ${
+                    sentence.includes(find) ? "is" : "is not"
+                } in the sentence`
+            );
+
+            // 2
+            let str = "Please give me 1000";
+            let amout = Number.parseInt(str.slice(15));
+            console.log(amout);
+            console.log(typeof amout);
+
+            // 3
+            let friend = "Deepika";
+            let friend2 = friend.replace("p", "r");
+            console.log(`${friend}\n${friend2}`);
+        </script>
+    </body>
+</html>

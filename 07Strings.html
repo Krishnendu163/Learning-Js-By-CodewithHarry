@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Strings</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Strings</h1>
+        </section>
+
+        <script>
+            let name = "Harry";
+            // console.log(name.length)
+            console.log(name[0]);
+            console.log(name[1]);
+            let friend = "Prakash";
+            console.log(
+                "The name\t" +
+                    friend +
+                    "\tcontains\t" +
+                    friend.length +
+                    "\talphabets"
+            );
+
+            // Template Literals
+            let boy = "Sankarshan";
+            let boy2 = "Sandipan";
+
+            let conct = `${boy} Is Friend Of ${boy2}`;
+
+            console.log(conct);
+
+            // Escape Sequence Characters
+
+            let kp = "Krishnendu\tPal";
+            console.log(kp);
+            console.log(kp.length);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Functions</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Functions</h1>
+        </section>
+
+        <script>
+            function krish(x, y) {
+                switch (k) {
+                    case "+":
+                        return x + y;
+                    case "-":
+                        return x - y;
+                    case "*":
+                        return x * y;
+                    case "/":
+                        return x / y;
+                    default:
+                        return "Invalid operation";
+                }
+            }
+
+            let a = prompt("Enter the first Number");
+            let k = prompt("Enter the operation (+, -, *, /)");
+            let b = prompt("Enter the second Number");
+
+            // Parse input as numbers
+            // a = Number.parseFloat(a);
+            // b = Number.parseFloat(b);
+
+            console.log(krish(a, b));
+        </script>
+    </body>
+</html>

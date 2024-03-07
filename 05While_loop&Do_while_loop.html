@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>While And Do While Loop</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 id="try" class="text-center mt-5"></h1>
+        </section>
+
+        <script>
+            // while Loop
+            // let n = prompt("enter the value");
+            // n = Number.parseInt(n);
+
+            // let a = 0;
+
+            // while (a <= n) {
+            //     console.log(a + " " + "While Loop Working");
+            //     a++;
+            // }
+            // // Do while Loop || This runs atleast one time
+            // let b = prompt("enter the value");
+            // b = Number.parseInt(b);
+
+            // let c = 1;
+            // do {
+            //     console.log(c + " " + "Do While Loop Working");
+            //     c++;
+            // } while (c < b);
+
+            // Practice of Do while Loop || Create a function of Define a number and until that number will not match print "Try Again". And after succeed Print You gave entered Correct Number
+            let cn = 18;
+            let number;
+            while (number != cn) {
+                document.getElementById("try").innerHTML += "Try Again<br>";
+                number = prompt("Guess The Number");
+            }
+            document.getElementById("try").innerHTML +=
+                "You gave entered Correct Number";
+        </script>
+    </body>
+</html>
