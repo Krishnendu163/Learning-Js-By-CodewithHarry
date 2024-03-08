@@ -144,6 +144,69 @@ Parent post type category get Code
     <h4><?php echo $category->name; ?></h4>
 <?php } ?>
 
+------------
+First parent and then his subcategory and order them customely get Code
+------------
+<!-- Step one -->
+<ul>
+    <?php
+    $maincat_args = array(
+        'taxonomy' => 'category',
+        'hide_empty' => false,
+        'parent' => 0,
+        'meta_key' => 'category_order', // Custom order field name
+        'orderby' => 'meta_value_num', // Order by numeric value
+        'order' => 'ASC', // ASC for ascending order, DESC for descending order
+    );
+
+    $maincats = get_terms($maincat_args);
+
+    foreach ($maincats as $maincatData) {
+        ?>
+        <li>                        
+            <a href="<?php echo get_category_link($maincatData->term_id)?>">
+                <?php echo $maincatData->name; ?>
+                    
+            </a>
+
+            <?php
+            // Get subcategories for the current main category
+            $subcat_args = array(
+                'taxonomy' => 'category',
+                'hide_empty' => false,
+                'parent' => $maincatData->term_id,
+            );
+
+            $subcats = get_terms($subcat_args);
+
+            if (!empty($subcats)) {
+                ?>
+                <ul class="subcategories cmn_arrow_hover">
+                    <?php
+                    foreach ($subcats as $subcatData) {
+                        ?>
+                        <li class="subcat_item">
+                            <a href="<?php echo get_category_link($subcatData->term_id)?>">
+                                <?php echo $subcatData->name; ?>
+                                    <img src="<?php echo get_template_directory_uri()?>/assets/images/arrow_right.svg" alt="Arrow Icon"/>
+                            </a>
+                        </li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+                <?php
+            }
+            ?>
+        </li> 
+        <?php
+    }
+    ?>
+</ul>
+<!-- Step Two -->
+A. In the WordPress admin, go to Custom Fields > Add New.
+B. Create a new field group for categories with a field named "category_order" (type: Number).
+C. Assign this field group to the "category" taxonomy.
 
 ------------
 post by category function Code
@@ -273,8 +336,6 @@ Option page get field Code
 ------------
 <?php echo get_field('fter_scal_link', 'option');?>
 
-
- 
 
 ------------
 Standard  get Field Code
@@ -527,29 +588,6 @@ function create_my_taxonomy(){
 }
 ?>
 
-------------
-Get taxonomy name Code
-------------
-<ul class="cmn_arrow_hover">
-    <?php 
-    $newscat_args = array(
-        'taxonomy' => 'category',
-        'hide_empty' => false,
-        'parent' => 0,
-    );
-
-    $newscat = get_terms($newscat_args);
-
-    foreach ($newscat as $newscateData) {
-    ?>
-    <li>                        
-        <a href="<?php echo get_category_link($newscateData->term_id)?>">
-            <?php echo $newscateData->name; ?>
-            <img src="<?php echo get_template_directory_uri()?>/assets/images/arrow_right.svg" alt="Arrow Icon"/>
-        </a>
-    </li> 
-    <?php } ?>
-</ul>
 
 ------------
 Tab + lightbox dynamic Code

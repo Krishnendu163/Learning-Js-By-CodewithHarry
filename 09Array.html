@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Array</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Array</h1>
+        </section>
+
+        <script>
+            let k = [80, 70, 60, 50, 76, false, null, "Not Present"];
+            console.log(k);
+            console.log(k[2]);
+            console.log(k[1]);
+            console.log(k[5]);
+            console.log(k.length);
+            k[5] = true;
+            console.log(k);
+
+            let b = 0;
+            for (b; b < k.length; b++) {
+                console.log(k[b]);
+            }
+
+            // Array Methods
+
+            // 1 toString()
+            let num = [50, 80, 90, 55, 65];
+            console.log(typeof num);
+            let bc = num.toString();
+            console.log(typeof bc);
+
+            // 2 join()
+            let cc = num.join(" - ");
+            console.log(cc);
+
+            // 3 pop()
+            let dd = num.pop();
+            console.log(dd, num);
+
+            // 4 push()
+            let ee = num.push(1);
+            console.log(ee, num);
+
+            // 5 shift()
+            let shift = num.shift();
+            console.log(shift, num);
+        </script>
+    </body>
+</html>
