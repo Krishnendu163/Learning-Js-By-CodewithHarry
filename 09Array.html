@@ -60,6 +60,32 @@
             // 5 shift()
             let shift = num.shift();
             console.log(shift, num);
+
+            // 6 unshift
+            let r = num.unshift(78);
+            console.log(r, num);
+
+            // 7 delete function
+            let nam = [50, 80, 90, 55, 65];
+            delete nam[0];
+            console.log(nam);
+
+            // 8 concat function
+            let arr1 = [50, 80, 90, 55, 65];
+            let arr2 = [20, 20, 40, 45, 45];
+            let arr3 = [40, 50, 10, 25, 25];
+
+            let newarray = arr1.concat(arr2, "\t" + arr3);
+            console.log(newarray);
+
+            // 8 concat function with compare function
+            let compare = (a, b) => {
+                return a - b;
+            };
+            let num2 = [300, 20, 110000, 800, 90, 55, 65];
+            console.log(num2);
+            num2.sort(compare);
+            console.log(num2);
         </script>
     </body>
 </html>
