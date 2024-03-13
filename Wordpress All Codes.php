@@ -868,7 +868,7 @@ function filter_posts() {
 </ul>
 
     <!-- By this code we show the post \/-->
-<?php 
+    <?php 
     $args = [
         'post_type' => 'services',
         'posts_per_page' => -1,
@@ -1165,3 +1165,26 @@ Popup will not display after onetime closed by cookie code
  endif;
 endif;
  ?>
+
+
+------------
+Get all the items under the select field code
+------------
+<div class="referral_category">
+    <?php
+    
+    $field = get_field_object('field_65eea58036fef'); // Adjust field name and args as needed
+    $values = $field['value'];
+    $choices = $field['choices'];
+
+    // print_r($field)
+    ?>
+
+    <select>
+        <?php foreach ($choices as $choice_value => $choice_label) : ?>
+            <option value="<?php echo esc_attr($choice_value); ?>" <?php selected(in_array($choice_value, $values), true); ?>>
+                <?php echo esc_html($choice_label); ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+</div>

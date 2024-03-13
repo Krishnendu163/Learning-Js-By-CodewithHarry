@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Using Array with Loops</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Using Array with Loops</h1>
+        </section>
+
+        <script>
+            let num = [3, 5, 1, 2, 4];
+
+            // for(let i=0; i<num.length;i++){
+            //   console.log(num[i])
+            // }
+
+            // ForEach Loop
+            num.forEach((element) => {
+                console.log(element * element);
+            });
+
+            // Array.from
+            let aa = "Noob";
+            let cc = aa.replace("N", "S");
+            let bb = Array.from(cc);
+
+            console.log(bb);
+            console.log(cc);
+
+            // for...of
+            for (let item of num) {
+                console.log(item);
+            }
+
+            // for...in
+            for (let i in num) {
+                console.log(num[i]);
+            }
+        </script>
+    </body>
+</html>
