@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Map / Filter / Reduce</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Map / Filter / Reduce</h1>
+        </section>
+
+        <script>
+            // Map Method
+            let arr = [0, 50, 20, 60, 80];
+
+            let newa = arr.map((value, index, array) => {
+                console.log(value.index, array);
+                return value + index;
+            });
+            console.log(newa);
+
+            // Array filter method
+            let brr = [0, 500, 200, 60, 80, 100];
+
+            let vr = brr.filter((a) => {
+                return a >= 100;
+            });
+
+            console.log(vr);
+
+            // Array reduce method
+            let rdc = [2, 2, 8, 1];
+
+            let rdr = rdc.reduce((h1, h2) => {
+                return h1 + h2;
+            });
+            console.log("sum of vr is" + " " + rdr);
+
+            // ===================== Practice Set of Array ====================== \\
+
+            // Q1. Need to add a number in existing array
+            let parr = [0, 1, 2, 4, 5, 6];
+
+            let pbrr = parr.push(45);
+
+            console.log(parr);
+
+            // Q2. Create a function that say to give number and untill unless given number will not matched with 0
+
+            let q2arr = [20, 25, 40, 60, 0];
+            let q2final = 0;
+            let q2enter;
+            do {
+                q2enter = prompt("Enter Number");
+                q2num = Number.parseInt(q2enter);
+                let q2add = q2arr.push(q2num);
+                console.log(q2arr);
+            } while (q2enter != 0);
+            console.log("Success");
+
+            // Q3. Create a function that show the numbers from an array who can divided by 10 and value comes 0
+            let q3arr = [1, 2, 3, 40, 50, 60, 83, 670, 370];
+
+            let q3func = q3arr.filter((q3a) => {
+                return q3a % 10 == 0;
+            });
+            console.log(q3func);
+
+            // Q4. Create a Function that return the square number of given number
+            let q4arr = [2, 3, 4, 5];
+
+            let q4func = q4arr.map((qaa) => {
+                return qaa * qaa;
+            });
+            console.log(q4func);
+
+            // Q5
+            let arr3 = [1, 2, 3, 5, 2, 1];
+            const reduce_func = (h1, h2) => {
+                return h1 + h2;
+            };
+            let newarr3 = arr3.reduce(reduce_func);
+            console.log(newarr3);
+        </script>
+    </body>
+</html>
