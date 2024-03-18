@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>17Exercise 2 Snake-water-gun game</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Snake-water-gun</h1>
+            <h2 class="text-center mt-5" id="score"></h2>
+        </section>
+
+        <script>
+            let alphabet = "S W G";
+            let getRandomLetter =
+                alphabet[Math.floor(Math.random() * alphabet.length)];
+            let i = 0;
+            let correctGuesses = 0;
+
+            do {
+                let prom = prompt("Pick Yours");
+                let upper = prom.toUpperCase();
+                i++;
+                if (upper === getRandomLetter) {
+                    alert("You win");
+                    correctGuesses++;
+                } else {
+                    alert("You are lost");
+                }
+            } while (i < 6);
+            document.getElementById(
+                "score"
+            ).innerHTML = `You guessed correctly  ${correctGuesses} times`;
+        </script>
+    </body>
+</html>
