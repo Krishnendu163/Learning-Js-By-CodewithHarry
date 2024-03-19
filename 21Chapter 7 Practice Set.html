@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>21Chapter 7 Practice Set.html</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1 class="text-center mt-5">Chapter 7 Practice Set.html</h1>
+            <h2>Test</h2>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1 class="text-center mt-5">Chapter 7 Practice Set.html</h1>
+            <h2>Test</h2>
+        </section>
+        <section>
+            <h1 class="text-center mt-5">Chapter 7 Practice Set.html</h1>
+            <h2>Test</h2>
+        </section>
+
+        <script>
+            document.getElementsByTagName(
+                "section"
+            )[2].firstElementChild.style.color = "red";
+            document.getElementsByTagName(
+                "section"
+            )[2].lastElementChild.style.color = "red";
+            Array.from(document.getElementsByTagName("table")).forEach(
+                (element) => {
+                    element.style.color = "red";
+                }
+            );
+        </script>
+    </body>
+</html>
