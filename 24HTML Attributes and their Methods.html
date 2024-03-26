@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTML Attributes and their methods</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <section>
+            <h1
+                id="first"
+                class="text-center mt-5"
+                data-game="BGMI"
+                data-player="DARK HEAVEN"
+            >
+                HTML Attributes and their methods
+            </h1>
+        </section>
+
+        <script>
+            let first = document.getElementById("first");
+            let k = first.getAttribute("class");
+            console.log(k);
+            console.log(first.hasAttribute("class"));
+            console.log(first.hasAttribute("style"));
+            console.log(first.hasAttribute("id"));
+            first.setAttribute("class", "display-none");
+            first.removeAttribute("class");
+            console.log(first.dataset);
+            console.log(first.dataset.game);
+            console.log(first.dataset.player);
+        </script>
+    </body>
+</html>
